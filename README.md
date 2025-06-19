@@ -1,7 +1,4 @@
 # Unity-Monopoly-Game-Development-Assignment
-
-# 🎲 monopoly-clone-unity
-
 A 2D Monopoly-style board game built in Unity (2025). Designed for a 2-player local multiplayer experience, this project features dice rolls, property acquisition, rent mechanics, chance events, jail system, and a full user interface with live transaction logs.
 
 ---

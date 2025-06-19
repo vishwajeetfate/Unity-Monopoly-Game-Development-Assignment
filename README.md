@@ -145,59 +145,6 @@ Live event log includes:
 
 ---
 
-## 📁 Project Structure
-
-
-📁 Project Structure
-
-Assets/
-├── _Project/
-│   ├── Scripts/
-│   │   ├── Managers/
-│   │   │   ├── GameManager.cs
-│   │   │   ├── UIManager.cs
-│   │   │   └── BoardManager.cs
-│   │   ├── Player/
-│   │   │   └── Player.cs
-│   │   ├── Tiles/
-│   │   │   ├── Tile.cs
-│   │   │   ├── PropertyTile.cs
-│   │   │   ├── ChanceTile.cs
-│   │   │   ├── JailTile.cs
-│   │   │   ├── GoToJailTile.cs
-│   │   │   ├── UtilityTile.cs
-│   │   │   └── SpecialTile.cs
-│   └── Prefabs/
-│       ├── Tile.prefab
-│       └── Player.prefab
-├── Art/
-│   ├── Sprites/
-│   │   ├── Dice/
-│   │   │   ├── dice1.png
-│   │   │   ├── dice2.png
-│   │   │   └── ...
-│   └── Tiles/
-├── UI/
-│   ├── Panels/
-│   │   ├── PlayerInfoPanel.prefab
-│   │   ├── PropertyInfoPanel.prefab
-│   │   └── WinScreenPanel.prefab
-│   ├── Buttons/
-│   │   ├── DiceButton.prefab
-│   │   ├── BuyButton.prefab
-│   │   ├── SkipButton.prefab
-│   │   └── EndTurnButton.prefab
-│   └── Fonts/
-├── Scenes/
-│   └── MainScene.unity
-├── Resources/ (only if needed)
-│   └── GameData/
-├── Audio/ (optional)
-├── Materials/ (optional)
-└── Plugins/ (if used)
-
----
-
 ## 🏁 Credits
 
 **Developer:** Vishwajeet Fate  

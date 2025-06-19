@@ -1,5 +1,6 @@
 # Unity-Monopoly-Game-Development-Assignment
 
+🎲 Monopoly-Style Unity Game
 A simplified digital board game built in Unity (2025), featuring property trading, rent, jail, chance tiles, and a complete UI system.
 
 📆 Project Summary
@@ -203,4 +204,3 @@ Assets/
 🏁 Credits
 Developed by: Vishwajeet Fate
 Built for: Game Developer Assignment 2025
-

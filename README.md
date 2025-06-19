@@ -1,183 +1,155 @@
 # Unity-Monopoly-Game-Development-Assignment
 
-🎲 Monopoly-Style Unity Game
-A simplified digital board game built in Unity (2025), featuring property trading, rent, jail, chance tiles, and a complete UI system.
+# 🎲 monopoly-clone-unity
 
-📆 Project Summary
-This 2-player local multiplayer board game replicates core mechanics from Monopoly/Bankroll. Players roll dice, move around a 24-tile square board, purchase properties, and interact with Chance and Jail systems. The gameplay is turn-based, supports all UI panels, and logs every major event.
+A 2D Monopoly-style board game built in Unity (2025). Designed for a 2-player local multiplayer experience, this project features dice rolls, property acquisition, rent mechanics, chance events, jail system, and a full user interface with live transaction logs.
 
-📂 Contents
-🧱 Board Layout & Tile System
+---
 
-🧍‍♂️ Player Mechanics
+## 📆 Project Summary
 
-💸 Property System
+This project was developed for the **Game Developer Assignment 2025**. It replicates core Monopoly-style gameplay mechanics with a clean UI and object-oriented structure, entirely in Unity using C#.
 
-🚓 Jail Logic
+---
 
-🎲 Dice Mechanics
+## 📂 Contents
 
-🎨 Full User Interface
+- 🧱 Board Layout & Tile System  
+- 🧍‍♂️ Player Mechanics  
+- 💸 Property System  
+- 🚓 Jail Logic  
+- 🎲 Dice Mechanics  
+- 🎨 Full User Interface  
+- 🧾 Transaction Log  
+- ⚖️ Turn Management  
 
-🧾 Transaction Log
+---
 
-⚖️ Turn Management
+## 🧱 Board Design
 
-🧱 Board Design
-Total Tiles: 24 (square layout)
+- **Total Tiles:** 24 arranged in a square layout
+- **Tile Types:**
+  - 🏙 City Properties (buyable, rent-based)
+  - ⚡ Utility (Electric Co., 15% rent)
+  - 🚆 Railway, ✈️ Airport, ⚓ Harbor (cosmetic only)
+  - 🎲 Chance (random 10–30% loss or 50% gain)
+  - 🚓 Jail (3-turn lock)
+  - ⏩ Go To Jail (send player to jail)
+  - 🏁 Start (collect $200 when passed)
 
-Tile Types:
+---
 
-🏙 City Properties (buyable, rent-based)
+## 🎮 Gameplay Flow
 
-⚡ Utility (Electric Co., 15% rent)
+1. Players alternate turns rolling a 6-sided dice.
+2. Movement is clockwise across the board.
+3. On landing:
+   - **Unowned Property** → option to buy or skip
+   - **Opponent’s Property** → pay rent
+   - **Chance Tile** → lose/gain money
+   - **Go To Jail** → get locked for 3 turns
+   - **Pass Start** → collect $200
 
-🚆 Railway, ✈️ Airport, ⚓ Harbor (cosmetic)
+---
 
-🎲 Chance Tiles (random money events)
+## 🧍‍♂️ Player System
 
-🚓 Jail Tile (3-turn lock)
+- 2 Players: “Player 1” and “Player 2”
+- Each has:
+  - Starting money: `$1500`
+  - Jail state & 3-turn countdown
+  - List of owned properties
 
-⏩ Go To Jail (send player directly)
+---
 
-🌟 Start Tile (+$200 bonus when passed)
+## 💸 Property System
 
-🎮 Gameplay Flow
-Each player takes a turn rolling a 6-sided dice.
+- Property price varies by index
+- Rent = 10% of price, 15% for utility
+- Cannot buy owned properties
+- Auto-pays rent on landing
+- Displays property info in panel
 
-Players move clockwise on the board.
+---
 
-On landing:
+## 🚓 Jail System
 
-Buy unowned properties
+- Triggered via Chance or Jail tiles
+- Player is frozen for 3 full turns
+- Cannot roll or move, but can collect rent
 
-Pay rent to opponents
+---
 
-Trigger random effects from Chance
+## 🎲 Dice Mechanics
 
-Get locked in jail for 3 turns (can't move)
+- Roll 1–6 with button
+- Animated visual dice
+- Movement and log triggered by roll
 
-Receive $200 when passing Start
+---
 
-🧍‍♂️ Player System
-2 Players: "Player 1" and "Player 2"
+## 🎨 UI Features
 
-Each player has:
+- ✅ Player status panel (money, property count)
+- ✅ Current turn display
+- ✅ Dice result display
+- ✅ Buy, Skip, and End Turn buttons
+- ✅ Property info panel
+- ✅ Transaction log with all actions
+- ✅ Win screen on player elimination
 
-A name
+---
 
-Money ($1500 starting)
+## 🧾 Transaction Log
 
-List of owned properties
+Live event log includes:
+- Dice rolls
+- Property buys
+- Rent transfers
+- Jail entries/exits
+- Chance gains/losses
+- Bankruptcies
 
-Jail status and countdown
+---
 
-💸 Property System
-Buy unowned properties
+## ⚙️ Technical Overview
 
-Price varies by tile index
+- Language: C#
+- Engine: Unity 2021.3+ (2D URP)
+- Architecture:
+  - `Tile` base class extended by: `PropertyTile`, `ChanceTile`, `JailTile`, etc.
+  - Singleton managers: `GameManager`, `UIManager`
+  - Modular scripts for all logic systems
 
-Rent = 10% of price (utilities: 15%)
+---
 
-Automatically pay rent when landing on owned property
+## ✅ Features Implemented
 
-Cannot buy already-owned property
+- ✅ Turn system with UI
+- ✅ Dynamic board & tiles
+- ✅ Rent, jail, and purchase mechanics
+- ✅ Dice roll animation
+- ✅ Player elimination
+- ✅ Win screen logic
+- ✅ Fully functional and responsive UI
 
-🚓 Jail System
-Sent to jail via tile or Chance event
+---
 
-Held for 3 turns
+## 🧠 Future Improvements
 
-Cannot roll or move while jailed
+- 🔁 Property trading
+- 🌐 Online multiplayer or AI
+- 🎨 Special tile effects
+- 🧠 Smarter turn options
+- 💬 Multilingual support
 
-Still collects rent from owned properties
+---
 
-🎲 Dice Mechanics
-Clickable dice button rolls 1–6
+## 📁 Project Structure
 
-Visual dice animation (sprite-based)
-
-Final result shown in text
-
-Player moves accordingly
-
-🎨 UI Features
-✅ Turn indicator (whose turn)
-
-✅ Player money and owned property count
-
-✅ Dice result display
-
-✅ Property info panel
-
-✅ Buy / Skip / End Turn buttons
-
-✅ Transaction log (scrolling history)
-
-✅ Win screen when one player remains
-
-🧾 Transaction Log
-Live log shows:
-
-Dice rolls
-
-Property purchases
-
-Rent payments
-
-Chance gains/losses
-
-Jail entries and releases
-
-Bankruptcy/eliminations
-
-⚙️ Technical Overview
-Language: C#
-
-Engine: Unity 2021+ (2D URP)
-
-Architecture:
-
-Tile base class → extended by PropertyTile, ChanceTile, JailTile, etc.
-
-Player.cs manages movement, money, and ownership
-
-UIManager.cs handles all UI logic and logging
-
-GameManager.cs controls turn flow and game state
-
-✅ Features Implemented
-✅ Turn-based player system
-
-✅ Tile interaction with logic
-
-✅ Random Chance (90% lose, 10% gain)
-
-✅ Jail logic with countdown
-
-✅ Dice roll animation
-
-✅ Elimination on bankruptcy
-
-✅ Win screen on last player
-
-✅ Full UI integration
-
-🧠 Future Improvements
-🔁 Property trading
-
-🌐 AI or online multiplayer
-
-💬 Localization support
-
-💡 Special abilities or events
-
-✨ Visual polish (e.g., FX on special tiles)
 
 📁 Project Structure
-markdown
-Copy
-Edit
+
 Assets/
 ├── Scripts/
 │   ├── GameManager.cs
@@ -201,6 +173,13 @@ Assets/
     ├── PropertyInfoPanel
     ├── TransactionLog ScrollView
     └── WinScreenPanel
-🏁 Credits
-Developed by: Vishwajeet Fate
-Built for: Game Developer Assignment 2025
+
+---
+
+## 🏁 Credits
+
+**Developer:** Vishwajeet Fate  
+**Assignment:** Game Developer Assignment 2025  
+**Tools:** Unity 2D, C#
+
+---
